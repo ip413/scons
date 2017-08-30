@@ -70,12 +70,3 @@ function SignedConsole() {
         console.error(_getFinalString.apply(this, arguments).join(""));
     }
 }
-
-/* TESTS */
-/*
-scons.log();
-scons.log("data");
-(function xxx() {
-    scons.log("data", {"e": 34}, [3, 5, 8])
-})();
-*/
