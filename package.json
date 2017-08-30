@@ -1,0 +1,23 @@
+{
+  "name": "scons",
+  "version": "0.1.2",
+  "description": "signed js console",
+  "main": "scons.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ip413/scons.git"
+  },
+  "keywords": [
+    "console",
+    "debug"
+  ],
+  "author": "ip413as@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ip413/scons/issues"
+  },
+  "homepage": "https://github.com/ip413/scons#readme"
+}
