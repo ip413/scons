@@ -1,15 +1,18 @@
 "use strict"
-/*
- Signed console will trace time, function name and file name.
- Useful for faster debugging in node.
- Use it like standard console, for example:
- scons.log(), scons.warn("value", value), scons.error();
-
- scons.log("abc", {a: "a"}) will print
- -21:11:33.315------------------------------------/file.js:6:11  someFunction()
- abc
- { a: 'a' }
-*/
+/**
+ *  Signed console will trace time, function name and file name.
+ *  Useful for faster debugging.
+ *  Use it like standard console, for example: scons.log().
+ *  Right now supported methods: log, warn, error.
+ *
+ * @example
+ * scons.log("abc", {a: "a"})
+ * will print
+ * -21:11:33.315------------------------------------/file.js:6:11  someFunction()
+ *         abc
+ *         { a: 'a' }
+ *
+ */
 var scons = new SignedConsole();
 module.exports = scons;
 
