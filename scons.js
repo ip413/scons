@@ -6,9 +6,9 @@
  *  Right now supported methods: log, warn, error.
  *
  * @example
- * scons.log("abc", {a: "a"})
+ * scons.log("abc", {a: "a"}) in function "someFunction()"
  * will print
- * -21:11:33.315------------------------------------/file.js:6:11  someFunction()
+ * -21:11:33.315------------------------------------/file.js:6:11  someFunction()-
  *         abc
  *         { a: 'a' }
  *
