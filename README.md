@@ -38,4 +38,4 @@ scons.error()
 
 ## License
 
-[MIT](http://vjpr.mit-license.org)
+[MIT](http://mit-license.org)
