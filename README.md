@@ -1,17 +1,29 @@
 # Signed console (scons)
 
-Signed console will trace time, function name and file name.
-Useful for faster debugging.
+Signed console will automaticly trace time, function, file and print it in fixed width line.
+Useful for faster debugging, where you don't want to write any identification details for every log, like:
 
-Use it like standard console, for example: scons.log().
+> console.log(1)  
+> console.log("end")
 
+etc.
+
+Use it like standard console, for example: 
+
+> scons.log() 
+
+will print
+
+> -21:11:33.315-----------------------------------/someFile.js:6:11  someFunction() -
+
+and
 
 > scons.log("abc", {a: "a"})
 
 in function "someFunction()" will print
 
 
-> -21:11:33.315------------------------------------/file.js:6:11  someFunction() -   
+> -21:11:33.315----------------------------------------------/file.js:6:11  someFunction() -   
 > abc  
 > { a: 'a' }
 
