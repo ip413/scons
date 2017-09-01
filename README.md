@@ -10,6 +10,8 @@ etc.
 
 Use it like standard console, for example: 
 
+> var scons = require("scons");
+
 > scons.log() 
 
 will print
