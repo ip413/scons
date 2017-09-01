@@ -1,6 +1,6 @@
 {
   "name": "scons",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "signed js console",
   "main": "scons.js",
   "scripts": {
