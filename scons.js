@@ -32,7 +32,7 @@ function SignedConsole() {
 
     function _getPrefixLine() {
         var prefixLine = '',
-            logLine = new Error().stack.split("\n")[4],
+            logLine = new Error().stack.split("\n")[5],
             lineNumber = logLine.match(/(\d+:\d+)\)?$/),
             filename = logLine.slice(logLine.lastIndexOf('/')).split(":")[0],
             date = new Date(),
@@ -54,19 +54,25 @@ function SignedConsole() {
         return stringArray;
     }
 
-    SignedConsole.prototype.log = function() {
+    function _applyConsoleFunction(functionName, _arguments) {
         try {
-            console.log.bind(console).apply(this, _getFinalString.apply(this, arguments));
+            // This construction allows to see constructor name of complex objects - or browse them in browsers.
+            // (insead of seeing [object Object] in: console.log(_getFinalString.apply(this, _arguments).join(""));)
+            console[functionName].bind(console).apply(this, _getFinalString.apply(this, _arguments));
         } catch (error) {
             console.error(error);
         }
     }
 
+    SignedConsole.prototype.log = function() {
+        return _applyConsoleFunction('log', arguments);
+    }
+
     SignedConsole.prototype.warn = function() {
-        console.warn(_getFinalString.apply(this, arguments).join(""));
+        return _applyConsoleFunction('warn', arguments);
     }
 
     SignedConsole.prototype.error = function() {
-        console.error(_getFinalString.apply(this, arguments).join(""));
+        return _applyConsoleFunction('error', arguments);
     }
 }

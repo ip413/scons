@@ -1,17 +1,13 @@
 # Signed console (scons)
 
-Signed console will automaticly trace time, function, file and print it in fixed width line.
-Useful for faster debugging, where you don't want to write any identification details for every log, like:
+Signed console will automaticly print time, function, file in fixed width line.
+Useful for faster debugging, when you don't want to write any identification details for every log, like:
 
-> console.log(1)  
-> console.log("end")
-
-etc.
+> console.log(1); console.log("end") // etc.
 
 Use it like standard console, for example: 
 
-> var scons = require("scons");
-
+> var scons = require("scons");  
 > scons.log() 
 
 will print
@@ -32,11 +28,9 @@ in function "someFunction()" will print
 
 ## Usage
 
-scons.log()
-
-scons.warn()
-
-scons.error()
+scons.log(...)
+scons.warn(...)
+scons.error(...)
 
 ## License
 
