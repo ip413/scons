@@ -1,6 +1,6 @@
 {
   "name": "scons",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "\"Fast\" JS console with time, function and file in fixed width line",
   "main": "scons.js",
   "scripts": {
